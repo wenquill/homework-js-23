@@ -1,7 +1,7 @@
-import ToDoApp from "./pages/ToDoApp";
+import ToDoApp from './pages/ToDoApp'
 
-function App() {
-  return <ToDoApp />;
+function App () {
+   return <ToDoApp />
 }
 
-export default App;
+export default App

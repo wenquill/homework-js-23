@@ -1,0 +1,57 @@
+.input {
+   padding: 15px 10px;
+   border: none;
+   border-radius: 5px;
+   background-color: rgb(233, 210, 210);
+   max-width: 100%;
+   transition: all 0.2s ease;
+}
+
+.input:hover {
+   background-color: rgb(236, 202, 202);
+}
+
+.label {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+}
+
+.form {
+   padding: 10px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.addBtn {
+   align-self: center;
+   padding: 10px;
+   width: 100%;
+   font-family: inherit;
+   font-size: inherit;
+   background-color: rgb(206, 166, 166);
+   border: none;
+   transition: all 0.2s ease;
+}
+
+.addBtn:hover {
+   background-color: rgb(190, 150, 150);
+}
+
+.error {
+   color: rgb(148, 35, 35);
+   font-size: 12px;
+   position: absolute;
+   top: 76px;
+   left: 3px;
+}
+
+input[type='date' i] {
+   font-family: inherit;
+}
+
+.taskParam {
+   margin: 5px;
+   padding: 0;
+}
