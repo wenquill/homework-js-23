@@ -1,0 +1,31 @@
+.header {
+   padding: 20px;
+   background-color: #eee;
+   position: fixed;
+   top: 0;
+   width: 100vw;
+}
+
+.list {
+   list-style-type: none;
+   display: flex;
+   gap: 2rem;
+}
+
+.listItem {
+   padding: 5px;
+}
+
+.link {
+   text-decoration: none;
+   color: inherit;
+   position: relative;
+   transition: all ease-in-out 0.2s;
+   text-transform: uppercase;
+   font-weight: 700;
+   letter-spacing: 3px;
+}
+
+.listItem:hover .link{
+    color: red;
+}

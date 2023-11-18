@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-import getPostsThunk from '../../store/slices/PostsSlise'
+import { PropagateLoader } from 'react-spinners'
+import { MdError } from 'react-icons/md'
+import { getPostsThunk } from '../../store/slices/PostsSlise'
 import PostItem from '../PostItem'
+import styles from './PostsList.module.css'
 
 function PostsList ({ posts, isFetching, error, getPosts }) {
    console.log(posts, isFetching, error)
@@ -10,17 +13,26 @@ function PostsList ({ posts, isFetching, error, getPosts }) {
    }, [])
 
    return (
-      <main>
-         {isFetching && <div>Loading...</div>}
-         {error && <div>Error</div>}
+      <>
+         {isFetching && (
+            <div className={styles.loader}>
+               <PropagateLoader color='#000' />
+            </div>
+         )}
+         {error && (
+            <div className={styles.error}>
+               <MdError size='150' color='orange'/>
+               <span className={styles.errorText}>Sorry, it seems like some troubles were happened ):</span>
+            </div>
+         )}
          {!isFetching && !error && (
-            <ul>
+            <ul className={styles.list}>
                {posts.map(p => (
                   <PostItem title={p.title} body={p.body} key={p.id} />
                ))}
             </ul>
          )}
-      </main>
+      </>
    )
 }
 

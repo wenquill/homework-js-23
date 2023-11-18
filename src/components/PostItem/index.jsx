@@ -1,9 +1,10 @@
 import React from 'react'
+import styles from './PostItem.module.css'
 
-function PostItem (title, body) {
+function PostItem ({title, body}) {
    return (
-      <li>
-         <h2>{title}</h2>
+      <li className={styles.listItem}>
+         <h2 className={styles.title}>{title}</h2>
          <p>{body}</p>
       </li>
    )

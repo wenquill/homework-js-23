@@ -1,0 +1,11 @@
+.listItem {
+   list-style-type: none;
+   margin: 0 auto;
+   margin-bottom: 2rem;
+   background-color: rgba(148, 179, 179, 0.603);
+   max-width: 800px;
+   padding: 20px;
+   box-shadow: 0 2px 0.5rem;
+   border-radius: 0.5rem;
+}
+
